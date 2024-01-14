@@ -7,8 +7,8 @@ st.title("🎬 Movie Recommendation System")
 
 @st.cache(allow_output_mutation=True)
 def load_data():
-    movie_df = pickle.load(open("Required/movie_recm.pkl", "rb"))
-    similarity = pickle.load(open("Required/similarity.pkl", "rb"))
+    movie_df = pickle.load(open("movie_recm.pkl", "rb"))
+    similarity = pickle.load(open("similarity.pkl", "rb"))
     return movie_df, similarity
 
 def get_recommendations(movie_df, similarity, movie):
